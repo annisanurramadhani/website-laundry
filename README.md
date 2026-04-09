@@ -16,7 +16,7 @@ Website LaundryAn adalah website layanan laundry modern yang dibuat menggunakan 
 - JavaScript
 
 ## Struktur Project
-laundry-website/
+web-laundry/
 ├── index.html
 ├── layanan.html
 ├── harga.html
