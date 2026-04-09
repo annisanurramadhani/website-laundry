@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div id="navbar"></div>
+
+    <section class="py-5" style="min-height: 89vh;">
+        <div class="container mt-5">
+            <div class="row align-items-center g-4">
+
+                <!-- KIRI -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-3">Area Layanan Kami</h2>
+
+                    <p>Kami melayani antar jemput laundry untuk area berikut, jika lokasi kamu belum tercantum silahkan
+                        hubungi kami.</p>
+
+                    <!-- LIST LOKASI + ICON -->
+                    <ul class="mt-3 list-unstyled">
+                        <li><i class="bi bi-geo-alt-fill me-2 text-primary"></i>Kota Tegal</li>
+                        <li><i class="bi bi-geo-alt-fill me-2 text-primary"></i>Slawi</li>
+                        <li><i class="bi bi-geo-alt-fill me-2 text-primary"></i>Adiwerna</li>
+                        <li><i class="bi bi-geo-alt-fill me-2 text-primary"></i>Dukuhturi</li>
+                        <li><i class="bi bi-geo-alt-fill me-2 text-primary"></i>Talang</li>
+                    </ul>
+
+                    <!-- INFO ANTAR JEMPUT -->
+                    <p class="mt-3">
+                        <i class="bi bi-truck me-2 text-success"></i>
+                        Gratis antar jemput untuk radius &lt; 3 km
+                    </p>
+
+                </div>
+
+                <!-- KANAN (MAPS TEGAL) -->
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps?q=Tegal&output=embed" style="border:0;"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                });
+        }
+
+        loadComponent("navbar", "components/navbar.html");
+        loadComponent("footer", "components/footer.html");
+    </script>
+
+</body>
+
+</html>
